@@ -1,0 +1,10 @@
+<div class="container mx-auto mt-5 w-50">
+  <div class="row">
+    <% @articles.each do |article| %>
+      <%= link_to article.title, article_path(article), class:"list-group-item list-group-item-action letter-bigger" %>
+      <div class="list-group-item letter-small">
+        <%= "- #{article.content}"%>
+      </div>
+    <% end %>
+  </div>
+</div>

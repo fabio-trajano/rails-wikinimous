@@ -1,0 +1,15 @@
+<div class="container w-50 mx-auto my-5">
+  <div class="card" style="">
+  <div class="card-body">
+    <h5 class="card-title mb-4" style="font-family: 'Open Sans', sans-serif"> <%= @article.title %></h5>
+    <p class="card-text" style="font-family: 'Open Sans', sans-serif"> <%= @article.content %></p>
+      <%= link_to "Edit", edit_article_path(@article), class: "btn btn-sm btn-outline-primary m-3" %>
+      <%= link_to "Show all", articles_path, class: "btn btn-sm btn-outline-secondary m-3" %>
+      <%= link_to "Delete",
+        article_path(@article),
+        data: {turbo_method: :delete, turbo_confirm: "Are you sure?"},
+        class: "btn btn-sm btn-outline-danger m-3"
+      %>
+  </div>
+</div>
+</div>
